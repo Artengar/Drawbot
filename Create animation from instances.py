@@ -29,41 +29,30 @@ for thisLayer in selectedLayers:
          ActiveFont.glyphs[currentGlyph.name].layers[master.id].decomposeComponents()
 
 #Create the different frames
-page=0
-for instance in ActiveFont.instances:
-    page+=1
-    if page == pages+1:
-        break
-    print("processing page %s")%page
-    newPage(pageWidth, pageHeight)
+def renderAnimation():
+    page=0
+    for instance in ActiveFont.instances:
+        page+=1
+        if page == pages:
+            break
+        print("processing page %s")%page
+        newPage(pageWidth, pageHeight)
+        
+        fill(0, 0, 0, 1)
+        frameDuration(1/20)
+        #width and heigth only works after a page is created.
+        canvasWidth = width()
+        canvasHeight = height()
+        translate(canvasWidth/2-500, canvasHeight/2-300)
     
-    fill(0, 0, 0, 1)
-    frameDuration(1/20)
-    #width and heigth only works after a page is created.
-    canvasWidth = width()
-    canvasHeight = height()
-    translate(canvasWidth/2-500, canvasHeight/2-300)
-    
-    
-    instanceFont = instance.interpolatedFontProxy
-    for thisLayer in selectedLayers:
-        instanceGlyph = instanceFont.glyphForName_(thisLayer.parent.name)
-        instanceLayer = instanceGlyph.layers[instanceFont.fontMasterID()]
-        drawPath(instanceLayer.bezierPath)
-    
-    
-    #instance2 = GSInstance()
-    #instance2.weightValue = 100
-    #instance2.widthValue = 100
-    #instance2.customValue = 100
-    #instance2.setFont_(ActiveFont)
-    #instanceFont = GSInterpolationFontProxy.alloc().initWithFont_instance_(ActiveFont, instance2)
-    #instanceGlyph = instanceFont.glyphs["Kaleidoscoop-2"]
-    #instanceLayer = instanceGlyph.layers[instanceFont.fontMasterID()]
-    #drawPath(instanceLayer.bezierPath)
-    #instance2 = BezierPath()
-    #instance2.text('G', font='Helvetica', fontSize=72, offset=(100,100) )
-    #drawPath(instance2)
+        
+        instanceFont = instance.interpolatedFontProxy
+        for thisLayer in selectedLayers:
+            instanceGlyph = instanceFont.glyphForName_(thisLayer.parent.name)
+            instanceLayer = instanceGlyph.layers[instanceFont.fontMasterID()]
+            drawPath(instanceLayer.bezierPath)
+
+renderAnimation()
 
 saveToPath = "~/Desktop/" + ActiveFont.familyName + ".gif"
 saveImage(saveToPath)
