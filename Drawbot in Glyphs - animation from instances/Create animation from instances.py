@@ -1,6 +1,6 @@
 #NOTE: this script is written for Drawbot within Glyphs!
-#NOTE: this scritp is suited for Glyphs animations on OpenType variations trough pre-defined instances. The design has to be adapted in order to create a loop.
-# For questions, contact Maarten Renckens
+#NOTE: this script is suited for Glyphs animations on OpenType variations trough pre-defined instances. The design has to be adapted in order to create a loop.
+# For questions, contact Maarten Renckens: maarten.renckens@artengar.com
 
 from GlyphsApp import *
 import objc
