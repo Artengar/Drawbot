@@ -1,6 +1,7 @@
 #----
 #Maarten Renckens's Snares animation
 #Python script for Drawbot
+#For questions, please contact maarten.renckens@artengar.com
 #----
 
 totalPages=30 #More large amount is required in order for the animation to work!
