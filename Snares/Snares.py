@@ -18,6 +18,8 @@ actionRange=[]
 for page in range(totalPages):
     print(page)
     newPage(width=pageWidth, height=pageHeight)
+    fill(1)
+    rect(0, 0, width(), height())
     frameDuration(1/20)
     
     #set out the transformations
@@ -30,6 +32,7 @@ for page in range(totalPages):
     print centerPoint
     
     # create the new  paths
+    fill(0)
     #First intention was to extend beyond pageWidth,
     #but having a shape jumping in for 1 frame is strange.
     while distanceOfShapes < pageWidth+100:
