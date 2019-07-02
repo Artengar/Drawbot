@@ -4,7 +4,6 @@
 #For questions, please contact maarten.renckens@artengar.com
 #----
 import math
-import numpy
 #from fractions import Fraction
 #Good explanation about sine, cosine and tangent: https://www.youtube.com/watch?v=VBygj7p0HKc
 
