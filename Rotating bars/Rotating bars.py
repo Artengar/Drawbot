@@ -31,7 +31,7 @@ while frameNumber < desiredAmountOfFrames:
     #calculate corners and distances
     #the first bar is straight, but the possible other bars are not.
     thisStepInDegrees=stepsInDegrees*frameNumber-(desiredAmountOfVisibleBars-1)*stepsInDegrees
-    print "degree:", thisStepInDegrees
+    print("degree:", thisStepInDegrees)
     #Draw all bars
     while barNumber < desiredAmountOfVisibleBars:
         inBetweenStep=thisStepInDegrees+barNumber*stepsInDegrees
@@ -39,13 +39,13 @@ while frameNumber < desiredAmountOfFrames:
             xDistance = (math.tan(math.radians(inBetweenStep)))
         else:
             xDistance = -halfStrokeLength
-        print barNumber, inBetweenStep
+        print(barNumber, inBetweenStep)
         #THERE IS A MISTAKE IN CALCULATING THE LINE LENGTH.
         #WHEN HALFSTROKELENGTH IS SMALL, THIS IS VISIBLE…    
         yDistance = (math.sin(math.radians(inBetweenStep)*xDistance))
         #Draw the line
         visibility=1-((barNumber+1)*(1/desiredAmountOfVisibleBars))
-        print visibility
+        print(visibility)
         stroke(visibility, visibility, visibility)
         strokeWidth(125)
         #deterime the angle of the bar
