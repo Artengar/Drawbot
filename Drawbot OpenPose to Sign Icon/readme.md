@@ -1,3 +1,3 @@
-#Drawbot OpenPose to Sign Icons
+# Drawbot OpenPose to Sign Icons
 
 This script transfers OpenPose data to Sign Icons
