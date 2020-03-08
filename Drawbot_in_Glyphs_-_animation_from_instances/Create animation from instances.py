@@ -41,6 +41,7 @@ def renderAnimation():
         fill(1)
         rect(-10,-10,1020,1020)
         fill(0, 0, 0, 1)
+=======
         frameDuration(1/20)
         #width and heigth only works after a page is created.
         canvasWidth = width()
@@ -48,6 +49,11 @@ def renderAnimation():
         translate(canvasWidth/2-500, canvasHeight/2-300)
     
         
+        #place a background
+        fill(1)
+        rect(0,-200,1000,1000)
+        
+        fill(0, 0, 0, 1)
         instanceFont = instance.interpolatedFontProxy
         for thisLayer in selectedLayers:
             instanceGlyph = instanceFont.glyphForName_(thisLayer.parent.name)
