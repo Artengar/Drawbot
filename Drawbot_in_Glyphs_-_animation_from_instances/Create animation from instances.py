@@ -41,7 +41,7 @@ def renderAnimation():
         fill(1)
         rect(-10,-10,1020,1020)
         fill(0, 0, 0, 1)
-=======
+        #=======
         frameDuration(1/20)
         #width and heigth only works after a page is created.
         canvasWidth = width()
@@ -62,6 +62,6 @@ def renderAnimation():
 
 renderAnimation()
 
-saveToPath = "~/Desktop/" + ActiveFont.familyName + ".gif"
+saveToPath = "~/Desktop/" + ActiveFont.familyName + ".mp4"
 saveImage(saveToPath)
 print("ready!")
