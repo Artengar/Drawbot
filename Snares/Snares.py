@@ -29,7 +29,7 @@ for page in range(totalPages):
     distanceCenterPoints = (pageWidth+1000)/(totalPages-2)
     #determine the centerpoint where the animation happens.
     centerPoint = -500 + stageOfAnimation*(distanceCenterPoints)-distanceCenterPoints
-    print centerPoint
+    print(centerPoint)
     
     # create the new  paths
     fill(0)
