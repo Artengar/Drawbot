@@ -23,7 +23,7 @@ def drawPage(currentName):
     fill(0)
     translate(500, 350)
     fontSize(24)
-    text("Sign for ''" + currentName + "': complete overview", (0, -300), align="center")
+    text("Sign for ''" + currentName + "': overview", (0, -300), align="center")
 
 
 
