@@ -1,4 +1,4 @@
-#Empty pages template
+#stripes
 #Free for use and modify, as long as a reference is provided.
 #created by Maarten Renckens (maarten.renckens@artengar.com)
 
@@ -13,6 +13,8 @@ for page in range(amountOfPages):
         newPage(pageWidth, pageHeight)
     elif page ==0:
         size(pageWidth, pageHeight)
+    #Set the time of each page (frame)
+    frameDuration(1/20)
     #set the origin in the middle of the page
     translate(pageWidth/2, pageHeight/2)
     #create a background
