@@ -1,4 +1,4 @@
-#stripes
+#Template to create empty pages
 #Free for use and modify, as long as a reference is provided.
 #created by Maarten Renckens (maarten.renckens@artengar.com)
 
