@@ -27,7 +27,8 @@ def fibonacci(amountOfSteps):
     return progressList
 
 #Start the code
-amountOfAnimations = randint(10,40)
+scale2 = 1#randint(100,300)/100
+amountOfAnimations = randint(10,20)
 print(amountOfAnimations)
 for page in range(amountOfPages):
     print("==================== Starting page %s ====================" %page)
@@ -42,16 +43,14 @@ for page in range(amountOfPages):
     #create a background
     radialGradient(startPoint=(0,100), endPoint=(0,300), colors=[(0.05, 0.05, 0.05), (1, 0, 0.8)], locations=[0,0.5], startRadius=0, endRadius=1720)
     rect(-pageWidth,-pageHeight,pageWidth*2, pageHeight*2)
-    radialGradient(None)
     
     #do something on the pages
-    amountOfSteps = 50
+    amountOfSteps = 60
     progressList = fibonacci(amountOfSteps)
     
     for item in range(amountOfAnimations):
         #Draw Fibonacci
         stroke(0)
-        fill(None)
         strokeWidth(randint(2,10))
         path = BezierPath()
         path.moveTo((midpointX,midpointY))
@@ -65,11 +64,10 @@ for page in range(amountOfPages):
         #Calculate the actual form
         #scale = 1-0.021*page #######THIS WOULD BE THE NORMAL CODE FOR 25 PAGES
         scale = scaleList[page] ########CUSTOM ADDED FOR THIS SPECIFIC ANIMATION
-        scale2 = randint(100,300)/100
         for item in range(len(progressList)):
             if item !=0:
-                correctorWidth = correctorWidth/1.35
-                correctorHeight = correctorHeight/1.35
+                correctorWidth = correctorWidth/(randint(135,155)/100)
+                correctorHeight = correctorHeight/(randint(135,155)/100)
             #STRUCTURE:
             #Getting if positive/negative:    via sin(radians(item*90))
             #reverse all values, to get a nine:    negative correctors
